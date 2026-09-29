@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+}
+.form{
+    background-color: gainsboro;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+}
+.line{
+    text-decoration: line-through;
+}
+p ::selection{
+    background-color: transparent;
+    user-select: none;
+}
+.board{
+    gap: 20px;
+    display: flex;
+    padding: 0 30px;
+    align-items: flex-start;
+}
+.zone{
+    flex-direction: column;
+    display: flex;
+    background-color: #f4f5f7;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+.cards-container{
+    min-height: 400px;
+    background-color: rgba(0,0,0,0.02);
+    border-radius: 4px;
+    padding: 4px;
+    transition: background-color 0.2s;
+
+}
+.form{
+    background-color: gainsboro;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card{
+    background-color: #fff;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgb(0, 0, 0,0.02);
+    cursor: grab;
+    font-size: 15px;
+    font-weight: 500;
+    transition: transform 0.1s;
+    box-shadow: 0.2s;
+}
+.card.dragging{
+    opacity: 0.5;
+    background-color: #e2e8f0;
+}
+.text{
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0,5s;
+}
+text:focus{
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+#todo{ border-top: 4px solid #3b82f6;}
+#important { border-top: 4px solid #ef4444; }   
+#accomplished { border-top: 4px solid #10b981; } 
+#trash { border-top: 4px solid #64748b; }  
+card::hover{
+     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.card:active {
+    cursor: grabbing;
+}
